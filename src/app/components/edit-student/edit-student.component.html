@@ -1,0 +1,37 @@
+<h3> <div class="editar1">Editar Cadastro!</div></h3>
+<div class="editar">
+<div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Cadastro Editado Com Sucesso!</strong> Obrigado por compartilhar a sua história.
+  <button (click)="removeMessage()" type="button"  data-bs-dismiss="alert" aria-label="Close">x
+  
+  </button>
+</div>
+<form [formGroup]="editStudent" (ngSubmit)="UpdateData()">
+    <div class="mb-3">
+      <label class="form-label">Nome</label>
+      <input type="txt" class="form-control" placeholder="Enter name" formControlName="name">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Telefone</label>
+      <input type="txt" class="form-control" placeholder="Insira o seu número" formControlName="telefone">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Endereço</label>
+      <input type="txt" class="form-control" placeholder="Insira o seu número" formControlName="endereco">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Cep</label>
+      <input type="txt" class="form-control" placeholder="Insira o seu número" formControlName="cep">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+      </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
